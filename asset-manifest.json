@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/starwars-pomodoro/static/css/main.66d4b0ef.chunk.css",
-    "main.js": "/starwars-pomodoro/static/js/main.1686c572.chunk.js",
-    "main.js.map": "/starwars-pomodoro/static/js/main.1686c572.chunk.js.map",
-    "runtime-main.js": "/starwars-pomodoro/static/js/runtime-main.5f655cbb.js",
-    "runtime-main.js.map": "/starwars-pomodoro/static/js/runtime-main.5f655cbb.js.map",
-    "static/js/2.5f537dcc.chunk.js": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js",
-    "static/js/2.5f537dcc.chunk.js.map": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js.map",
-    "index.html": "/starwars-pomodoro/index.html",
-    "precache-manifest.302f351c9bcd5d2ed213013df315ac70.js": "/starwars-pomodoro/precache-manifest.302f351c9bcd5d2ed213013df315ac70.js",
-    "service-worker.js": "/starwars-pomodoro/service-worker.js",
-    "static/css/main.66d4b0ef.chunk.css.map": "/starwars-pomodoro/static/css/main.66d4b0ef.chunk.css.map",
-    "static/js/2.5f537dcc.chunk.js.LICENSE.txt": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js.LICENSE.txt",
-    "static/media/app.scss": "/starwars-pomodoro/static/media/Aurebesh.c3b887af.otf",
-    "static/media/bith.png": "/starwars-pomodoro/static/media/bith.55bb85a4.png",
-    "static/media/yoda.png": "/starwars-pomodoro/static/media/yoda.39f95198.png"
+    "main.css": "/pomodoro/static/css/main.14572171.chunk.css",
+    "main.js": "/pomodoro/static/js/main.6d108389.chunk.js",
+    "main.js.map": "/pomodoro/static/js/main.6d108389.chunk.js.map",
+    "runtime-main.js": "/pomodoro/static/js/runtime-main.f3456f13.js",
+    "runtime-main.js.map": "/pomodoro/static/js/runtime-main.f3456f13.js.map",
+    "static/js/2.20d12757.chunk.js": "/pomodoro/static/js/2.20d12757.chunk.js",
+    "static/js/2.20d12757.chunk.js.map": "/pomodoro/static/js/2.20d12757.chunk.js.map",
+    "index.html": "/pomodoro/index.html",
+    "precache-manifest.ba3522e128912a168a7fbd2f1aef4739.js": "/pomodoro/precache-manifest.ba3522e128912a168a7fbd2f1aef4739.js",
+    "service-worker.js": "/pomodoro/service-worker.js",
+    "static/css/main.14572171.chunk.css.map": "/pomodoro/static/css/main.14572171.chunk.css.map",
+    "static/js/2.20d12757.chunk.js.LICENSE.txt": "/pomodoro/static/js/2.20d12757.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/pomodoro/static/media/Aurebesh.c3b887af.otf",
+    "static/media/bith.png": "/pomodoro/static/media/bith.55bb85a4.png",
+    "static/media/yoda.png": "/pomodoro/static/media/yoda.39f95198.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f655cbb.js",
-    "static/js/2.5f537dcc.chunk.js",
-    "static/css/main.66d4b0ef.chunk.css",
-    "static/js/main.1686c572.chunk.js"
+    "static/js/runtime-main.f3456f13.js",
+    "static/js/2.20d12757.chunk.js",
+    "static/css/main.14572171.chunk.css",
+    "static/js/main.6d108389.chunk.js"
   ]
 }
