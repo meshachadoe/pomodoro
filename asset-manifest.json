@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/starwars-pomodoro/static/css/main.66d4b0ef.chunk.css",
+    "main.js": "/starwars-pomodoro/static/js/main.1686c572.chunk.js",
+    "main.js.map": "/starwars-pomodoro/static/js/main.1686c572.chunk.js.map",
+    "runtime-main.js": "/starwars-pomodoro/static/js/runtime-main.5f655cbb.js",
+    "runtime-main.js.map": "/starwars-pomodoro/static/js/runtime-main.5f655cbb.js.map",
+    "static/js/2.5f537dcc.chunk.js": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js",
+    "static/js/2.5f537dcc.chunk.js.map": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js.map",
+    "index.html": "/starwars-pomodoro/index.html",
+    "precache-manifest.302f351c9bcd5d2ed213013df315ac70.js": "/starwars-pomodoro/precache-manifest.302f351c9bcd5d2ed213013df315ac70.js",
+    "service-worker.js": "/starwars-pomodoro/service-worker.js",
+    "static/css/main.66d4b0ef.chunk.css.map": "/starwars-pomodoro/static/css/main.66d4b0ef.chunk.css.map",
+    "static/js/2.5f537dcc.chunk.js.LICENSE.txt": "/starwars-pomodoro/static/js/2.5f537dcc.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/starwars-pomodoro/static/media/Aurebesh.c3b887af.otf",
+    "static/media/bith.png": "/starwars-pomodoro/static/media/bith.55bb85a4.png",
+    "static/media/yoda.png": "/starwars-pomodoro/static/media/yoda.39f95198.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5f655cbb.js",
+    "static/js/2.5f537dcc.chunk.js",
+    "static/css/main.66d4b0ef.chunk.css",
+    "static/js/main.1686c572.chunk.js"
+  ]
+}
