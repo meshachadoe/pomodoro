@@ -11,19 +11,24 @@
 	grid-template-rows: 1fr 4fr 1fr;
 	align-items: center;
 	z-index: -100;
-	a {
-		justify-self: flex-start;
-		button {
-			width: 100%;
-		}
+	a button {
+		width: 20%;
 	}
+	// a {
+	// 	justify-self: flex-start;
+	// 	width: 80%;
+	// 	button {
+	// 		width: 100%;
+	// 	}
+	// }
 	.dashboard__component__wrapper {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		width: 90%;
+		height: 100%;
 		margin-left: 5%;
-		animation: fade-in 1s ease-in;
+		animation: fade-in 0.5s ease-in;
 	}
 	.dashboard__component {
 		display: flex;
@@ -35,7 +40,7 @@
 			font-size: 5rem;
 			text-align: center;
 		}
-		> img {
+		a img {
 			height: 50vh;
 			width: auto;
 			margin-right: -2rem;

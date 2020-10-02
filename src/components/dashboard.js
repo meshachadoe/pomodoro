@@ -10,11 +10,15 @@ function Dashboard() {
 			</Link>
 			<div className='dashboard__component__wrapper'>
 				<div className='dashboard__component aqua'>
-					<img src={require('../img/yoda.png')} alt={'Star Wars Character'} />
+					<Link to='/study'>
+						<img src={require('../img/yoda.png')} alt={'Star Wars Character'} />
+					</Link>
 					<h2>focus with yoda</h2>
 				</div>
 				<div className='dashboard__component orange'>
-					<img src={require('../img/bith.png')} alt={'Star Wars Character'} />
+					<Link to='/break'>
+						<img src={require('../img/bith.png')} alt={'Star Wars Character'} />
+					</Link>
 					<h2>chill at the bar</h2>
 				</div>
 			</div>

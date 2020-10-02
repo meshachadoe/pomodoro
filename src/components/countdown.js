@@ -1,5 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../scss/countdown.scss';
 
 function Countdown(props) {
@@ -33,11 +34,13 @@ function Countdown(props) {
 
 	return (
 		<div style={styles} className='countdown'>
-			{props.mode === 'study' ? (
-				<button className='nav-button'>leave yoda</button>
-			) : (
-				<button className='nav-button'>leave bar</button>
-			)}
+			<Link to='/dashboard'>
+				{props.mode === 'study' ? (
+					<button className='nav-button'>leave yoda</button>
+				) : (
+					<button className='nav-button'>leave bar</button>
+				)}
+			</Link>
 
 			<div className='countdown__timer'>
 				<img
