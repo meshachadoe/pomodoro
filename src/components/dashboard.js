@@ -1,0 +1,37 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../scss/dashboard.scss';
+
+function Dashboard() {
+	return (
+		<div className='dashboard'>
+			<Link to='/'>
+				<button className='nav-button'>leave cantina</button>
+			</Link>
+			<div className='dashboard__component__wrapper'>
+				<div className='dashboard__component aqua'>
+					<img src={require('../img/yoda.png')} alt={'Star Wars Character'} />
+					<h2>focus with yoda</h2>
+				</div>
+				<div className='dashboard__component orange'>
+					<img src={require('../img/bith.png')} alt={'Star Wars Character'} />
+					<h2>chill at the bar</h2>
+				</div>
+			</div>
+			<footer>
+				<p>
+					characters owned by Star Wars.
+					<br />i do not own any of the characters.
+				</p>
+				<button className='display-toggle'>
+					dark mode
+					<label className='switch'>
+						<input type='checkbox' />
+						<span className='slider round'></span>
+					</label>
+				</button>
+			</footer>
+		</div>
+	);
+}
+export default Dashboard;

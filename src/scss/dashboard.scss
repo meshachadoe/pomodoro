@@ -1,0 +1,78 @@
+@import './reset.scss';
+@import './typography.scss';
+@import './buttons.scss';
+
+.dashboard {
+	height: 100vh;
+	color: rgb(56, 49, 44);
+	background-color: #f3ecda;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 1fr 4fr 1fr;
+	align-items: center;
+	z-index: -100;
+	a {
+		justify-self: flex-start;
+		button {
+			width: 100%;
+		}
+	}
+	.dashboard__component__wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 90%;
+		margin-left: 5%;
+		animation: fade-in 1s ease-in;
+	}
+	.dashboard__component {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		z-index: 100;
+		> h2 {
+			width: 40%;
+			font-size: 5rem;
+			text-align: center;
+		}
+		> img {
+			height: 50vh;
+			width: auto;
+			margin-right: -2rem;
+		}
+		&:after {
+			content: '\25cf';
+			position: absolute;
+			margin-left: 8%;
+			z-index: -2;
+			font-size: 700px;
+		}
+		&:first-of-type {
+			&:after {
+				color: #63bfac;
+			}
+		}
+		&:last-of-type {
+			&:after {
+				color: #e17e56;
+			}
+		}
+	}
+	footer {
+		display: flex;
+		justify-content: space-between;
+		> p {
+			padding-left: 2rem;
+			text-align: left;
+		}
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
+	}
+}

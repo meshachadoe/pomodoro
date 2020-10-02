@@ -1,0 +1,96 @@
+@import './reset.scss';
+@import './typography.scss';
+@import './buttons.scss';
+
+.landing {
+	height: 100vh;
+	background-color: #f3ecda;
+	color: #38312c;
+	> h1 {
+		position: absolute;
+		left: 5vw;
+		top: 5vh;
+		bottom: 0vh;
+		width: 100%;
+		max-height: 100vh;
+		overflow: hidden;
+		font-size: 6rem;
+		color: #d8caaa;
+		text-align: left;
+		animation-name: typing, alien-moveup;
+		animation-duration: 2s, 2s;
+		animation-delay: 0s, 2s;
+		animation-fill-mode: forwards, forwards;
+		animation-iteration-count: 1, 1;
+		animation-timing-function: steps(16), linear;
+	}
+	> h2 {
+		position: absolute;
+		left: 5vw;
+		bottom: 15vh;
+		font-size: 6rem;
+		text-align: left;
+		width: 50vw;
+		opacity: 0%;
+		animation: translator-intro 2s 3s forwards;
+	}
+	button {
+		padding: 1rem 2rem 1.5rem 2rem;
+		border-radius: 30px;
+		font-family: eckmannpsych-small, sans-serif;
+		font-weight: 400;
+		font-size: 2rem;
+		line-height: 70%;
+		position: absolute;
+		right: 0vw;
+		bottom: 8vh;
+		opacity: 0%;
+		animation: button-fadein 2s forwards;
+		&:hover {
+			background-color: #64594d;
+			cursor: pointer;
+		}
+	}
+}
+
+@keyframes translator-intro {
+	from {
+		opacity: 0%;
+		bottom: 0vh;
+	}
+	to {
+		opacity: 100%;
+		bottom: 10vh;
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes alien-moveup {
+	from {
+		top: 5vh;
+		bottom: 0vh;
+	}
+	to {
+		top: 0vh;
+		bottom: 60vh;
+	}
+}
+
+@keyframes button-fadein {
+	from {
+		opacity: 0%;
+		right: 0vw;
+	}
+	to {
+		opacity: 100%;
+		right: 5vw;
+	}
+}

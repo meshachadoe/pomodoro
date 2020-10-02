@@ -3,23 +3,26 @@ import React, { useState, useEffect } from 'react';
 import '../scss/countdown.scss';
 
 function Countdown(props) {
-	const [secondsLeft, setSecondsLeft] = useState(1500);
+	const [secondsLeft, setSecondsLeft] = useState(parseInt(props.duration));
 	const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 });
-	let timer = 0;
+	const [timer, setTimer] = useState(0);
+	const styles = {
+		backgroundColor: `${props.color}`,
+	};
 
 	useEffect(() => {
 		if (timer === 0 && secondsLeft > 0) {
-			timer = setInterval(countdown, 1000);
+			setTimer(setInterval(countdown, 1000));
 		}
-	}, []);
+	}, [timer]);
 
 	useEffect(() => {
-		const minutesTillEnd = Math.floor(secondsLeft / 60);
-		const secondsTillEnd = secondsLeft % 60;
-		setTimeLeft({ minutes: minutesTillEnd, seconds: secondsTillEnd });
 		if (secondsLeft === 0) {
 			clearInterval(timer);
 		}
+		const minutesTillEnd = Math.floor(secondsLeft / 60);
+		const secondsTillEnd = secondsLeft % 60;
+		setTimeLeft({ minutes: minutesTillEnd, seconds: secondsTillEnd });
 	}, [secondsLeft]);
 
 	function countdown() {
@@ -29,21 +32,36 @@ function Countdown(props) {
 	}
 
 	return (
-		<div className='countdown'>
-			<button className='nav-button'>leave yoda</button>
+		<div style={styles} className='countdown'>
+			{props.mode === 'study' ? (
+				<button className='nav-button'>leave yoda</button>
+			) : (
+				<button className='nav-button'>leave bar</button>
+			)}
+
 			<div className='countdown__timer'>
-				<img src={require('../img/yoda.png')} alt={'Yoda'} />
+				<img
+					src={require('../img/' + props.image)}
+					alt={'Star Wars Character'}
+				/>
 				<div>
-					<h2>
-						remaining <br /> time to focus
-					</h2>
+					{props.mode === 'study' ? (
+						<h2>
+							remaining <br /> time to focus
+						</h2>
+					) : (
+						<h2>
+							time for <br /> a break
+						</h2>
+					)}
+
 					{timeLeft.seconds >= 10 ? (
 						<h3>
 							{timeLeft.minutes}:{timeLeft.seconds}
 						</h3>
 					) : (
 						<h3>
-							{timeLeft.minutes}:{timeLeft.seconds}0
+							{timeLeft.minutes}:0{timeLeft.seconds}
 						</h3>
 					)}
 				</div>
@@ -51,7 +69,7 @@ function Countdown(props) {
 			<footer>
 				<p>
 					characters owned by Star Wars.
-					<br />i do not own any of the characters.{' '}
+					<br />i do not own any of the characters.
 				</p>
 				<button className='display-toggle'>
 					dark mode

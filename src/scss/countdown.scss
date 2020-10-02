@@ -3,7 +3,7 @@
 @import './buttons.scss';
 
 .countdown {
-	background-color: #63bfac;
+	// background-color: #63bfac;
 	color: #38312c;
 	height: 100vh;
 	overflow: hidden;
@@ -22,10 +22,7 @@
 			margin-right: 5%;
 		}
 	}
-	> h2 {
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-			sans-serif;
-	}
+
 	footer {
 		display: flex;
 		justify-content: space-between;

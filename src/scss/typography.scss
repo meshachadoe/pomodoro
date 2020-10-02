@@ -1,7 +1,14 @@
 @import url('https://use.typekit.net/eal8lsd.css');
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@font-face {
+	font-family: 'Aurebesh';
+	src: url('./fonts/Aurebesh/Aurebesh.otf') format('opentype');
+}
 
-h1,
+h1 {
+	font-family: 'Aurebesh';
+}
+
 h2,
 h3,
 h4 {
@@ -11,17 +18,18 @@ h4 {
 }
 
 h2 {
-    font-size: 5rem;
-    text-align: left;
-    line-height: 80%;
+	font-size: 5rem;
+	text-align: left;
+	line-height: 80%;
 }
 
 h3 {
-    font-size: 12rem;
-    text-align: left;
-    line-height: 80%;
+	font-size: 12rem;
+	text-align: left;
+	line-height: 80%;
 }
 
 p {
-    font-family: 'Share Tech', sans-serif;
+	font-family: 'Share Tech', sans-serif;
+	font-size: 1.2rem;
 }
