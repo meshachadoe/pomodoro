@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Landing from './components/landing';
+import Landing from './components/landing-static';
 import Countdown from './components/countdown';
 import Dashboard from './components/dashboard';
 import './scss/app.scss';
 
 function App() {
-	// const [mode, setMode] = useState();
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<div className='App'>
 				<Switch>
 					<Route path='/' exact component={Landing} />
