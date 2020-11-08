@@ -27,13 +27,13 @@ function Dashboard() {
 					characters owned by Star Wars.
 					<br />i do not own any of the characters.
 				</p>
-				<button className='display-toggle'>
+				{/* <button className='display-toggle'>
 					dark mode
 					<label className='switch'>
 						<input type='checkbox' />
 						<span className='slider round'></span>
 					</label>
-				</button>
+				</button> */}
 			</footer>
 		</div>
 	);

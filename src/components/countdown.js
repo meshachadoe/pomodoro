@@ -1,17 +1,19 @@
-import userEvent from '@testing-library/user-event';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// import { useAudio } from './audio';
 import '../scss/countdown.scss';
 
-function Countdown(props) {
+const Countdown = (props) => {
 	const [secondsLeft, setSecondsLeft] = useState(parseInt(props.duration));
 	const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 });
 	const [timer, setTimer] = useState(0);
+	const audioDOM = 'audio';
 	const styles = {
 		backgroundColor: `${props.color}`,
 	};
 
 	useEffect(() => {
+		document.getElementById(audioDOM).load();
 		if (timer === 0 && secondsLeft > 0) {
 			setTimer(setInterval(countdown, 1000));
 		}
@@ -19,6 +21,18 @@ function Countdown(props) {
 
 	useEffect(() => {
 		if (secondsLeft === 0) {
+			document
+				.getElementById(audioDOM)
+				.play()
+				.then((_) => {
+					// Automatic playback started!
+					// Show playing UI.
+				})
+				.catch((error) => {
+					console.log(error);
+					// Auto-play was prevented
+					// Show paused UI.
+				});
 			clearInterval(timer);
 		}
 		const minutesTillEnd = Math.floor(secondsLeft / 60);
@@ -26,14 +40,17 @@ function Countdown(props) {
 		setTimeLeft({ minutes: minutesTillEnd, seconds: secondsTillEnd });
 	}, [secondsLeft]);
 
-	function countdown() {
+	const countdown = () => {
 		setSecondsLeft((prevSecondsLeft) => {
 			return prevSecondsLeft - 1;
 		});
-	}
+	};
 
 	return (
 		<div style={styles} className='countdown'>
+			<audio id='audio'>
+				<source src='../audio/cantina.mp3' type='audio/mp3'></source>
+			</audio>
 			<Link to='/dashboard'>
 				{props.mode === 'study' ? (
 					<button className='nav-button'>leave yoda</button>
@@ -74,16 +91,16 @@ function Countdown(props) {
 					characters owned by Star Wars.
 					<br />i do not own any of the characters.
 				</p>
-				<button className='display-toggle'>
+				{/* <button className='display-toggle'>
 					dark mode
 					<label className='switch'>
 						<input type='checkbox' />
 						<span className='slider round'></span>
 					</label>
-				</button>
+				</button> */}
 			</footer>
 		</div>
 	);
-}
+};
 
 export default Countdown;
